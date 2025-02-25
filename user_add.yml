@@ -1,0 +1,9 @@
+---
+- name: User add
+  hosts: all
+  tasks:   
+  - name: User add
+    comment: "adding user in QA team"
+    shell: /bin/bash
+    group: QA
+    state: present      

@@ -1,0 +1,10 @@
+---
+- name: Copying files to take backup
+  hosts: localhost
+  tasks:
+  - name: Copy files
+    copy:
+      src: /root/abc.txt
+      dest: /tmp/
+      mode: 777
+      backup: true

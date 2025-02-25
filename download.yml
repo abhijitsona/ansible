@@ -1,0 +1,11 @@
+---
+- name: Download files
+  hosts: all
+  tasks:
+  - name: Download file
+    get_url:
+      url: <paste the url>
+      dest: /tmp/
+      owner: abhi
+      group: abhi
+      mode: 777

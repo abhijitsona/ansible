@@ -1,0 +1,11 @@
+---
+- name: Copying files to remote
+  hosts: localhost
+  tasks:
+  - name: Copy files
+    copy:
+      src: /root/myfiles.txt
+      dest: /tmp/
+      owner: paul
+      group: paul
+      mode: 777

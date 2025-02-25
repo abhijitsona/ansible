@@ -1,0 +1,9 @@
+---
+- name: User remove
+  hosts: all
+  tasks:   
+  - name: User remove
+    comment: "removing user from QA team"
+    shell: /bin/bash
+    group: QA
+    state: absent            

@@ -1,0 +1,17 @@
+---
+- name: Install and start nginx
+  hosts: all
+  become: yes  # Run tasks with elevated privileges (sudo)
+  tasks:
+    - name: Installing nginx
+      ansible.builtin.yum:
+        name: nginx
+        state: present
+      tags: i-nginx  # Tag for installing nginx
+
+    - name: Starting the nginx service
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: true
+      tags: ss-nginx  # Tag for starting and enabling nginx

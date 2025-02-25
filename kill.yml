@@ -1,0 +1,7 @@
+---
+- name: kill a process
+  hosts: all
+  tasks:
+  - name: find a process and kill it
+    ignore_errors: yes
+    shell: "pgrep nging | xargs kill"

@@ -1,0 +1,15 @@
+---
+- name: Creating a file
+  hosts: localhost
+  tasks:
+  - name: Creating a file on remote server
+    file:
+      path: /tmp/newfile.txt
+      state: touch
+      owner: abhi
+      group: abhi/prod
+      mode: 761
+  - name: Creating a directory
+    file:
+      path: /tmp/newdir
+      state: directory
